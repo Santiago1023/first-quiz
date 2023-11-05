@@ -15,7 +15,9 @@
 # it. As always, there is a test suite that checks the result. It is in 
 # `question2_test.py.`
 
-swapper = None
+swapper = None 
 
-def run_swapper(list_of_tuples):
-  return list(map(swapper, list_of_tuples))
+def run_swapper(list_of_tuples):  
+  return list(map(lambda tupla: tuple(reversed(list(tupla))), list_of_tuples))
+
+# print(run_swapper([("a", "b"), ("c", "d"), ("e", "f")]))
